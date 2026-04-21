@@ -1,0 +1,7 @@
+{
+  "name": "discord-collectibles-archive",
+  "type": "module",
+  "scripts": {
+    "archive": "node archive.js"
+  }
+}
