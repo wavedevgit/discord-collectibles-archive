@@ -68,11 +68,23 @@ async function processJsonFile(filename) {
     
     const response = await fetch(url, {
         headers: {
-            "referer": "https://yapper.shop/",
-            "origin": "https://yapper.shop",
-            "authorization": "bazinga",
-            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
-            "app-properties": "eyJhcHBfdmVyc2lvbiI6IjcuNS44IiwiYXBwX3R5cGUiOiJTdGFibGUiLCJjbGllbnRfY29kZSI6ImRHOXdjeTh1ZVhad1lYUndaSE02TDJOa2NHNWxjaTR2TG1wemFIbGhaWEJvIn0="
+          ":authority": "api.yapper.dev",
+          ":method": "GET",
+          ":path": "/v4/experiments",
+          ":scheme": "https",
+          "accept": "*/*",
+          "accept-encoding": "gzip, deflate, br, zstd",
+          "accept-language": "en-US,en;q=0.9",
+          "app-properties": "eyJhcHBfdmVyc2lvbiI6IjcuNS44IiwiYXBwX3R5cGUiOiJTdGFibGUiLCJjbGllbnRfY29kZSI6ImRHOXdjeTh1ZVhad1lYUndaSE02TDJOa2NHNWxjaTR2TG1wemFIbGhaWEJvIn0=",
+          "authorization": "bazinga",
+          "cache-control": "no-cache",
+          "content-type": "application/json",
+          "dnt": "1",
+          "origin": "https://yapper.shop",
+          "pragma": "no-cache",
+          "priority": "u=1, i",
+          "referer": "https://yapper.shop/",
+          "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\""
         }
     });
     const data = await response.json();
@@ -144,13 +156,25 @@ async function processJsonFile(filename) {
                                                   const assetUrl = `https://api.yapper.dev/v4/assets/${layer.id}`;
                                 
                                 const response = await fetch(assetUrl, {
-                                    headers:  {
-                                        "referer": "https://yapper.shop/",
-                                        "origin": "https://yapper.shop",
-                                        "authorization": "bazinga",
-                                                    "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
-                                        "app-properties": "eyJhcHBfdmVyc2lvbiI6IjcuNS44IiwiYXBwX3R5cGUiOiJTdGFibGUiLCJjbGllbnRfY29kZSI6ImRHOXdjeTh1ZVhad1lYUndaSE02TDJOa2NHNWxjaTR2TG1wemFIbGhaWEJvIn0="
-                                    }
+                                    headers: {
+  ":authority": "api.yapper.dev",
+  ":method": "GET",
+  ":path": "/v4/experiments",
+  ":scheme": "https",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate, br, zstd",
+  "accept-language": "en-US,en;q=0.9",
+  "app-properties": "eyJhcHBfdmVyc2lvbiI6IjcuNS44IiwiYXBwX3R5cGUiOiJTdGFibGUiLCJjbGllbnRfY29kZSI6ImRHOXdjeTh1ZVhad1lYUndaSE02TDJOa2NHNWxjaTR2TG1wemFIbGhaWEJvIn0=",
+  "authorization": "bazinga",
+  "cache-control": "no-cache",
+  "content-type": "application/json",
+  "dnt": "1",
+  "origin": "https://yapper.shop",
+  "pragma": "no-cache",
+  "priority": "u=1, i",
+  "referer": "https://yapper.shop/",
+  "sec-ch-ua": "\"Not;A=Brand\";v=\"8\", \"Chromium\";v=\"150\", \"Google Chrome\";v=\"150\""
+}
                                 });
                                     if (response.ok) {
                                         const assetData = await response.json();
