@@ -64,7 +64,7 @@ function extractAssetIds(obj, prefix = '') {
 async function processJsonFile(filename) {
     const filepath = path.join(DATA_DIR, filename);
     console.log(`Fetching ${filename}...`);
-       const url = `https://api.yapper.dev/v4/categories/${filename.replace('.json', '')}`;
+       const url = `https://api.yapper.dev/v4/categories/${filename.replace('.json', '')}?include_unpublished=true`;
     
     const response = await fetch(url, {
         headers: {
