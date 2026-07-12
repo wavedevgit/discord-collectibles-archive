@@ -1,6 +1,5 @@
 {
-  "error": "404: Not Found",
-  "message": "This data does not exist.",
-  "err": 404,
-  "code": 0
+  "status": 403,
+  "error": "Forbidden",
+  "message": "You do not have permission to access this resource."
 }
