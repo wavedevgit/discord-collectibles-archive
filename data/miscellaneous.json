@@ -1,6 +1,6 @@
 {
-  "error": "410: Gone",
-  "message": "The requested resource has been permanently deleted and is no longer available.",
-  "err": 410,
+  "error": "404: Not Found",
+  "message": "This data does not exist.",
+  "err": 404,
   "code": 0
 }
