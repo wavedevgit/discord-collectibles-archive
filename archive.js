@@ -69,7 +69,9 @@ async function processJsonFile(filename) {
     const response = await fetch(url, {
         headers: {
             "referer": "https://yapper.shop/",
-            "origin": "https://yapper.shop"
+            "origin": "https://yapper.shop",
+            "authorization": "bazinga",
+            "app-properties": "eyJhcHBfdmVyc2lvbiI6IjcuNS44IiwiYXBwX3R5cGUiOiJTdGFibGUiLCJjbGllbnRfY29kZSI6ImRHOXdjeTh1ZVhad1lYUndaSE02TDJOa2NHNWxjaTR2TG1wemFIbGhaWEJvIn0="
         }
     });
     const data = await response.json();
@@ -141,9 +143,11 @@ async function processJsonFile(filename) {
                                                   const assetUrl = `https://api.yapper.shop/v4/assets/${layer.id}`;
                                 
                                 const response = await fetch(assetUrl, {
-                                    headers: {
+                                    headers:  {
                                         "referer": "https://yapper.shop/",
-                                        "origin": "https://yapper.shop"
+                                        "origin": "https://yapper.shop",
+                                        "authorization": "bazinga",
+                                        "app-properties": "eyJhcHBfdmVyc2lvbiI6IjcuNS44IiwiYXBwX3R5cGUiOiJTdGFibGUiLCJjbGllbnRfY29kZSI6ImRHOXdjeTh1ZVhad1lYUndaSE02TDJOa2NHNWxjaTR2TG1wemFIbGhaWEJvIn0="
                                     }
                                 });
                                     if (response.ok) {
