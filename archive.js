@@ -64,13 +64,14 @@ function extractAssetIds(obj, prefix = '') {
 async function processJsonFile(filename) {
     const filepath = path.join(DATA_DIR, filename);
     console.log(`Fetching ${filename}...`);
-       const url = `https://api.yapper.shop/v4/categories/${filename.replace('.json', '')}?include_unpublished=true`;
+       const url = `https://api.yapper.shop/v4/categories/${filename.replace('.json', '')}`;
     
     const response = await fetch(url, {
         headers: {
             "referer": "https://yapper.shop/",
             "origin": "https://yapper.shop",
             "authorization": "bazinga",
+            "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
             "app-properties": "eyJhcHBfdmVyc2lvbiI6IjcuNS44IiwiYXBwX3R5cGUiOiJTdGFibGUiLCJjbGllbnRfY29kZSI6ImRHOXdjeTh1ZVhad1lYUndaSE02TDJOa2NHNWxjaTR2TG1wemFIbGhaWEJvIn0="
         }
     });
@@ -147,6 +148,7 @@ async function processJsonFile(filename) {
                                         "referer": "https://yapper.shop/",
                                         "origin": "https://yapper.shop",
                                         "authorization": "bazinga",
+                                                    "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
                                         "app-properties": "eyJhcHBfdmVyc2lvbiI6IjcuNS44IiwiYXBwX3R5cGUiOiJTdGFibGUiLCJjbGllbnRfY29kZSI6ImRHOXdjeTh1ZVhad1lYUndaSE02TDJOa2NHNWxjaTR2TG1wemFIbGhaWEJvIn0="
                                     }
                                 });
