@@ -64,7 +64,7 @@ function extractAssetIds(obj, prefix = '') {
 async function processJsonFile(filename) {
     const filepath = path.join(DATA_DIR, filename);
     console.log(`Fetching ${filename}...`);
-       const url = `https://api.yapper.shop/v3/collectibles-pages/${filename.replace('.json', '')}?static_api=true`;
+       const url = `https://api.yapper.shop/v4/collectibles-pages/${filename.replace('.json', '')}?static_api=true`;
     
     const response = await fetch(url, {
         headers: {
@@ -138,7 +138,7 @@ async function processJsonFile(filename) {
                         if (item.layers) {
                             for (const layer of item.layers) {
                                 if (layer.id) {
-                                                  const assetUrl = `https://api.yapper.shop/v3/assets/${layer.id}`;
+                                                  const assetUrl = `https://api.yapper.shop/v4/assets/${layer.id}`;
                                 
                                 const response = await fetch(assetUrl, {
                                     headers: {
